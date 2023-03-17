@@ -1,0 +1,38 @@
+{
+  "name": "s16project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "test": "cross-env NODE_ENV=testing jest --verbose --runInBand",
+    "resetdb": "npm run rollback && npm run migrate && npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hbulent/s16project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hbulent/s16project/issues"
+  },
+  "homepage": "https://github.com/Hbulent/s16project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.4.2",
+    "knex-cleaner": "^1.3.1",
+    "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.21"
+  }
+}
